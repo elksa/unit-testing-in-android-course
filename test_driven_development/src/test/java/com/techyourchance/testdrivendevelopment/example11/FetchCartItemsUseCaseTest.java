@@ -16,17 +16,12 @@ import org.mockito.junit.MockitoJUnitRunner;
 import org.mockito.stubbing.Answer;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 import static org.hamcrest.CoreMatchers.is;
-import static org.hamcrest.CoreMatchers.instanceOf;
-import static org.hamcrest.CoreMatchers.notNullValue;
-import static org.hamcrest.CoreMatchers.nullValue;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyInt;
-import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.doAnswer;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.verifyNoMoreInteractions;
@@ -43,11 +38,15 @@ public class FetchCartItemsUseCaseTest {
     // endregion constants -------------------------------------------------------------------------
 
     // region helper fields ------------------------------------------------------------------------
-    @Mock GetCartItemsHttpEndpoint mGetCartItemsHttpEndpointMock;
-    @Mock FetchCartItemsUseCase.Listener mListenerMock1;
-    @Mock FetchCartItemsUseCase.Listener mListenerMock2;
+    @Mock
+    GetCartItemsHttpEndpoint mGetCartItemsHttpEndpointMock;
+    @Mock
+    FetchCartItemsUseCase.Listener mListenerMock1;
+    @Mock
+    FetchCartItemsUseCase.Listener mListenerMock2;
 
-    @Captor ArgumentCaptor<List<CartItem>> mAcListCartItem;
+    @Captor
+    ArgumentCaptor<List<CartItem>> mAcListCartItem;
     // endregion helper fields ---------------------------------------------------------------------
 
     FetchCartItemsUseCase SUT;

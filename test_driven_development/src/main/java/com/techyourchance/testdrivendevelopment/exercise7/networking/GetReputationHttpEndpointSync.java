@@ -11,7 +11,7 @@ public interface GetReputationHttpEndpointSync {
 
     class EndpointResult {
         private final EndpointStatus mEndpointStatus;
-        private final int mReputation;
+        private int mReputation;
 
         public EndpointResult(EndpointStatus endpointStatus, int reputation) {
             mEndpointStatus = endpointStatus;
@@ -24,6 +24,10 @@ public interface GetReputationHttpEndpointSync {
 
         public int getReputation() {
             return mReputation;
+        }
+
+        public void setReputation(int mReputation) {
+            this.mReputation = mReputation;
         }
     }
 
